@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #192734;
+}
+
+.image-container{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+}
+
+.image-container img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.image-container img:hover{
+    transform: scale(0.8) rotate(14deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68,17,136,0.2);
+}
+
+.individual-container{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.individual-container span{
+    position: absolute;
+    color: white;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
+}

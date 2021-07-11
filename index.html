@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="individual-container" id="individualContainer">
+        <img src="assets/images/img1.jpg" alt="Individual Image" id="individualFullscreenImage">
+        <span onclick="closeImage()">X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="assets/images/img1.jpg" alt="Image-1" onclick="openImage(this.src)">
+        <img src="assets/images/img2.jpg" alt="Image-2" onclick="openImage(this.src)">
+        <img src="assets/images/img3.jpg" alt="Image-3" onclick="openImage(this.src)">
+        <img src="assets/images/img4.jpg" alt="Image-4" onclick="openImage(this.src)">
+        <img src="assets/images/img5.jpg" alt="Image-5" onclick="openImage(this.src)">
+        <img src="assets/images/img6.jpg" alt="Image-6" onclick="openImage(this.src)">
+        <img src="assets/images/img7.jpg" alt="Image-7" onclick="openImage(this.src)">
+        <img src="assets/images/img8.jpg" alt="Image-8" onclick="openImage(this.src)">
+    </div>
+
+    <script>
+        var fullBox = document.getElementById('individualContainer');
+        var fullboxImage = document.getElementById('individualFullscreenImage');
+
+        function closeImage(){
+            fullBox.style.display = 'none';
+        }
+        function openImage(image){
+            console.log(image);
+            fullBox.style.display = 'flex';
+            fullboxImage.src= image;
+        }
+    </script>
+</body>
+</html>
